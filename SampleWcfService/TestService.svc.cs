@@ -40,6 +40,8 @@ namespace SampleWcfService
         void ITestService.ChangeStatus(string newStatus)
         {
             Console.Write($"Set the IsOneWay property of OperationContractAttribute to true for a OneWay message exchange pattern. Suppose you send a message to a service. This pattern is used when the service does some operation and you do not want a response back. For example, you want to change the status of a transaction from pending to completed and you do not want to get a confirmation from the service that the status is changed. You can use a OneWay pattern.");
+            Console.Write($"==========Before using this pattern, keep following points in your mind==============");
+            Console.Write($"You cannot use FaultContract with this pattern. ");
         }
     }
 }
